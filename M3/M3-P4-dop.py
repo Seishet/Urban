@@ -16,7 +16,9 @@ def calculate_structure_sum(param):
                 sum += calculate_structure_sum(i)
             else:
                 if type(i) == int:
-                    sum += int(i)
+                   sum += int(i)
+                elif type(i) == str:
+                    sum += len(i)
     return sum
 
 
