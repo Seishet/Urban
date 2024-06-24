@@ -10,6 +10,11 @@ class House:
             for i in range(1, new_floor+1):
                 print('Этаж: ', i)
 
-house = House('ЖК Эльбрус', 30)
-new_floor = input('Введите этаж: ')
-house.go_to(new_floor)
+name_ = input('Введите название ЖК: ')
+floors_ = int(input('Введите количество этажей: '))
+if floors_ < 1:
+    print('Неправильное количество этажей')
+else:
+    house = House(name_, floors_)
+    new_floor = input('Введите этаж: ')
+    house.go_to(new_floor)
